@@ -16,13 +16,13 @@ public class OddLess50 {
         Predicate<Integer> isOddAndLessThan50 = isOdd.and(isLessThen50);
 
         List<Integer> result =Arrays.stream(arr).boxed().filter(isOddAndLessThan50).toList();
-        System.out.println(result);
+        System.out.println("Predicate<Integer> result : "+result);
 
         IntPredicate isOddInt = n -> n%2!=0;
         IntPredicate isLessThen50Int = n -> n < 50;
         IntPredicate isOddAndLessThan50Int =  isOddInt.and(isLessThen50Int);
         List<Integer> result2 = Arrays.stream(arr).filter(isOddAndLessThan50Int).boxed().toList();
-        System.out.println(result2);
+        System.out.println("IntPredicate result : "+result2);
 
 
     }
