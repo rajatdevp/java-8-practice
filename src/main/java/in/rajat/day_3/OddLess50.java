@@ -10,12 +10,17 @@ public class OddLess50 {
     public static void main(String[] args){
         //Find odd numbers less than 50
         int[] arr = {10, 25, 45, 55, 65, 35, 75};
+
         Predicate<Integer> isOdd = n -> n%2!=0;
         Predicate<Integer> isLessThen50 = n -> n < 50;
 
         Predicate<Integer> isOddAndLessThan50 = isOdd.and(isLessThen50);
 
         List<Integer> result =Arrays.stream(arr).boxed().filter(isOddAndLessThan50).toList();
+
+        List<Integer> result1 = Arrays.stream(arr).filter(n -> n%2 !=0 && n<50).boxed().toList();
+        System.out.println("Concise result : "+result1);
+
         System.out.println("Predicate<Integer> result : "+result);
 
         IntPredicate isOddInt = n -> n%2!=0;
