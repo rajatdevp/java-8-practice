@@ -19,6 +19,5 @@ public class EndsWith0 {
                 .filter(n -> String.valueOf(n).endsWith("0"))
                 .forEach(System.out::println);
 
-
     }
 }
