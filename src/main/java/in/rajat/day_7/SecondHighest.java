@@ -17,5 +17,6 @@ public class SecondHighest {
                 .findFirst();
 
         System.out.println(optionalResult.orElse(null));
+        //65
     }
 }
