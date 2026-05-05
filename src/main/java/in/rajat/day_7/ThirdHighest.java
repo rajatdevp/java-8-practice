@@ -15,10 +15,11 @@ public class ThirdHighest {
 
         Optional<Integer>  optionalResult = nums.stream()
                 .sorted(Comparator.reverseOrder())
+                .distinct()
                 .skip(2)
                 .findFirst();
 
         optionalResult.ifPresent(printConsumer);
-
+        //50
     }
 }
