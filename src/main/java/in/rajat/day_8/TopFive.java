@@ -11,6 +11,7 @@ public class TopFive {
                 .limit(5).toList();
 
         System.out.println(result);
+        //[75, 65, 55, 45, 35]
 
     }
 }
