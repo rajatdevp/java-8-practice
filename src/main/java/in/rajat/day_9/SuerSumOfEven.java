@@ -1,13 +1,10 @@
 package in.rajat.day_9;
 
 import java.util.Arrays;
-import java.util.List;
-import java.util.function.Function;
 import java.util.function.IntPredicate;
-import java.util.function.IntUnaryOperator;
-import java.util.function.Predicate;
 
-public class SerqSumOfEven {
+//Find sum of squares of even numbers
+public class SuerSumOfEven {
 
     public static void main(String[] args){
 
