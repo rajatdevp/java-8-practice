@@ -19,6 +19,5 @@ public class SuerSumOfEven {
 
         System.out.println(result);
         //56
-
     }
 }
