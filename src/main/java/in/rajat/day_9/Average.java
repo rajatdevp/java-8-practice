@@ -3,6 +3,7 @@ package in.rajat.day_9;
 import java.util.Arrays;
 import java.util.OptionalDouble;
 
+//Find average of all numbers
 public class Average {
     public static void main(String[] args){
 
@@ -12,5 +13,6 @@ public class Average {
                 .average();
 
         System.out.println(result);
+        //30.0
     }
 }
