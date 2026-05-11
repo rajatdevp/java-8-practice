@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
 
+//Find sum of squares of all numbers
 public class SquareSum {
 
     public static void main(String[] args) {
