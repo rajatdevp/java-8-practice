@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.function.IntPredicate;
 
 //Find sum of squares of even numbers
-public class SuerSumOfEven {
+public class SquareSumOfEven {
 
     public static void main(String[] args){
 
