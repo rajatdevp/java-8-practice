@@ -21,5 +21,9 @@ public class FirstAndLast {
         //Option 1
         result2.ifPresent(System.out::println);//50
 
+        //Find First
+        Optional<Integer> result3 = list.stream().findFirst();
+
+        result3.ifPresent(System.out::println);//10
     }
 }
