@@ -21,7 +21,10 @@ public class Product {
 
         Optional<Integer> resultSum = nums.stream()
                 .reduce((a,b) -> a+b);
-
         resultSum.ifPresent(System.out::println);//45
+
+        Optional<Integer> resultSum2 = nums.stream()
+                .reduce(Integer::sum);
+        resultSum2.ifPresent(System.out::println);//
     }
 }
