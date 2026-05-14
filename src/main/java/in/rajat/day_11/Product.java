@@ -11,7 +11,7 @@ public class Product {
 
         List<Integer> nums = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9);
 
-         int result1 = nums.stream().
+        int result1 = nums.stream().
                 reduce(1, (a,b) -> a*b);
         System.out.println(result1);
 
@@ -19,5 +19,9 @@ public class Product {
                 .reduce((a,b) -> a*b);
         System.out.println(result2.get());
 
+        Optional<Integer> resultSum = nums.stream()
+                .reduce((a,b) -> a+b);
+
+        resultSum.ifPresent(System.out::println);//45
     }
 }
