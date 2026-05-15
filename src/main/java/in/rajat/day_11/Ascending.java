@@ -1,6 +1,6 @@
 package in.rajat.day_11;
 
-import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Ascending {
@@ -11,6 +11,13 @@ public class Ascending {
 
         List<Integer> result = nums.stream().sorted().toList();
         System.out.println(result);
+
+
+
+        List<Integer> resultDes = nums.stream()
+                .sorted(Comparator.reverseOrder())
+                .toList();
+        System.out.println(resultDes);
 
     }
 }
