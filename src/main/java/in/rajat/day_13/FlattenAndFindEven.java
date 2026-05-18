@@ -1,5 +1,6 @@
 package in.rajat.day_13;
 
+import java.util.Arrays;
 import java.util.List;
 
 //Flatten List<List<Integer>> and find even numbers
@@ -17,7 +18,18 @@ public class FlattenAndFindEven {
 		                           .flatMap(List::stream)
 		                           .filter(num -> num % 2 ==0).toList();
 
-		System.out.println(result);                           
+		System.out.println(result);
+
+        int[][] arr = {{1,2,3},
+                       {4,5,6},
+                       {7,8,9}};
+
+        List<Integer> result2 = Arrays.stream(arr)
+                .flatMapToInt(Arrays::stream)
+                .filter(num -> num % 2 == 0).boxed().toList();
+
+        System.out.println(result2);
+
 	} 
 
 }
