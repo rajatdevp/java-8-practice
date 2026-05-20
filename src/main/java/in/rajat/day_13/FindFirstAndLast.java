@@ -16,5 +16,10 @@ public class FindFirstAndLast {
 
         System.out.println(first10);
 
+        List<Integer> last5 = nums.stream()
+                .skip(nums.size()-5)
+                .collect(Collectors.toCollection(ArrayList::new));
+
+        System.out.println(last5);
     }
 }
