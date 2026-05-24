@@ -16,7 +16,6 @@ public class StartWith1 {
              while(num > 0){
                 digit = num%10;
              	num = num/10;
-
              }
           return digit == 1;
          };
