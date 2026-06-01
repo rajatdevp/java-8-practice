@@ -7,6 +7,7 @@ import java.util.Optional;
 public class MaxProduct {
 
     public static void main(String[] args) {
+        //Find max product of two numbers in list
         List<Integer> nums = List.of(10,20,5,30,15);
 
         int max = nums.stream()
