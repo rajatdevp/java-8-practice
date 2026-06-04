@@ -10,11 +10,12 @@ public class NthSmallest {
 
         List<Integer> nums = List.of(50,10);
         List<Integer> nums2 = List.of(30,20);
+        int n = 3;
 
        Optional<Integer> result =  Stream.of(nums, nums2)
                 .flatMap(List::stream)
                 .sorted()
-                .skip(2)
+                .skip(n-1)
                 .findFirst();
 
        System.out.println(result.orElse(0));
