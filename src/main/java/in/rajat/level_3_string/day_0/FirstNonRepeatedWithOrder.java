@@ -1,4 +1,4 @@
-package in.rajat.level_3_string;
+package in.rajat.level_3_string.day_0;
 
 import java.util.Arrays;
 import java.util.LinkedHashMap;
