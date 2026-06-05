@@ -5,7 +5,7 @@ import java.util.LinkedHashMap;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class FirstNonRepeated {
+public class FirstNonRepeatedWithOrder {
 
     public static void main(String[] args){
 
@@ -15,12 +15,21 @@ public class FirstNonRepeated {
              .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new,Collectors.counting()))
              .entrySet()
              .stream()
+             .filter(strSet -> strSet.getValue()==1)
              .findFirst()
              .get().getKey();
 
-     System.out.println(result);
+     System.out.println(result);//J
 
+        String result1 = Arrays.stream(str.split(""))
+                .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()))
+                .entrySet()
+                .stream()
+                .filter(strSet -> strSet.getValue()==1)
+                .findFirst()
+                .get().getKey();
 
+     System.out.println(result1);//s
     }
 
 }
