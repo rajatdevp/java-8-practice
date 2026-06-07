@@ -11,7 +11,7 @@ public class WordFrequency {
 
         String str = "Java is great. Java is fun";
 
-        str = str.replaceAll("[^a-zA-Z0-9 ]", "");
+        str = str.replaceAll("[^a-zA-Z0-9\\s]", "");
 
        Map<String,Long> result = Arrays.stream(str.split(" "))
                 .map(String::toLowerCase)
