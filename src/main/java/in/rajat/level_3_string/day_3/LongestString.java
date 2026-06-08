@@ -15,7 +15,7 @@ public class LongestString {
                 .max(Comparator.comparingInt(String::length));
 
        Optional<String> result2 =  list.stream()
-               .reduce((w1,w2) -> w1.length() > w2.length()?w1:w2);
+               .reduce((w1,w2) -> w1.length() >= w2.length()?w1:w2);
 
        Optional<String> result3 = list.stream()
                .sorted(Comparator.comparingInt(String::length).reversed())
