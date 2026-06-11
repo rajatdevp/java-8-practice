@@ -8,10 +8,16 @@ public class ConvertUppercaseAndLowercase {
 
         List<String> words = List.of("java","guides");
 
-        List<String> result = words.stream()
+        List<String> uppercaseResult = words.stream()
                 .map(String::toUpperCase)
                 .toList();
 
-        System.out.println("Uppercase: " + result);
+        System.out.println("Uppercase: " + uppercaseResult);
+
+        List<String>  lowerCaseResult  = uppercaseResult.stream()
+                .map(String::toLowerCase)
+                .toList();
+
+        System.out.println("Lowercase: " + lowerCaseResult);
     }
 }
