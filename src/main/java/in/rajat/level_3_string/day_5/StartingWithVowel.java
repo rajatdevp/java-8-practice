@@ -13,5 +13,10 @@ public class StartingWithVowel {
                 .filter(word -> "aeiou".indexOf(word.charAt(0))>=0)
                 .toList();
         System.out.println(result);
+
+        List<String> endsWith = words.stream()
+                .filter(word -> "aeiou".indexOf(word.charAt(word.length()-1))>=0)
+                .toList();
+        System.out.println(endsWith);
     }
 }
