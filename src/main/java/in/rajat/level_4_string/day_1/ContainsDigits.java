@@ -15,7 +15,7 @@ public class ContainsDigits {
        System.out.println(regXResult);
 
        List<String> streamResult =  words.stream()
-               .filter(word -> word.chars().anyMatch(Character::isDigit))
+               .filter(word -> word.chars().anyMatch(Character::isDigit))//anyMatch return true if IntStream have digit
                .toList();
 
        System.out.println(streamResult);
