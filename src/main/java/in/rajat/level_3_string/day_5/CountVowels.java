@@ -12,6 +12,13 @@ public class CountVowels {
                 .map(word -> word.replaceAll("[^aeiou]", "").length())
                 .reduce(Integer::sum);
 
+        long allVowels = words.stream()
+                .flatMapToInt(String::chars)
+                .filter(ch-> "aeiou".indexOf(ch) >= 0)
+                .count();
+
+        System.out.println(allVowels);
+
         System.out.println(result.orElse(0));
     }
 }
