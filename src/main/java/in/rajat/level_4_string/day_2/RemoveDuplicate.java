@@ -15,6 +15,7 @@ public class RemoveDuplicate {
                 .distinct()
                 .toList();
 
+
         System.out.println(distinctResult);
     }
 }
