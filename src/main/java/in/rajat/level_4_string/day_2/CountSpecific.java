@@ -1,7 +1,7 @@
 package in.rajat.level_4_string.day_2;
 
 import java.util.Arrays;
-
+//Count occurrences of a specific substring
 public class CountSpecific {
 
     public static void main(String[] args){
