@@ -20,6 +20,9 @@ public class CountLength {
                                 (a, b)-> a,
                                 LinkedHashMap::new));
 
+       String s =  Arrays.stream(str.split(" ")).collect(Collectors.joining(", ","[","]"));
+
         System.out.println(result);
+        System.out.println(s);
     }
 }
