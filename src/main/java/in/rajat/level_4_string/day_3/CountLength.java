@@ -1,6 +1,7 @@
 package in.rajat.level_4_string.day_3;
 
 import java.util.Arrays;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -12,7 +13,12 @@ public class CountLength {
         String str = "Java 8 Streams are powerful";
 
         Map<String,Integer> result = Arrays.stream(str.split(" "))
-                .collect(Collectors.toMap(Function.identity(), String::length));
+                .collect(
+                        Collectors.toMap(
+                                Function.identity(),
+                                String::length,
+                                (a, b)-> a,
+                                LinkedHashMap::new));
 
         System.out.println(result);
     }
