@@ -7,12 +7,15 @@ import java.util.stream.Collectors;
 
 public class GroupByVowel {
 
+    static String VOWEL = "aeiou";
+
     public static void main(String[] args){
 
        List<String> words = List.of("apple", "banana", "sky", "queen");
 
+
        Function<String,Long> vowels = word -> word.chars()
-               .filter(ch-> "aeiou".indexOf(ch)!=-1)
+               .filter(ch-> VOWEL.indexOf(ch)!=-1)
                .count();
 
        Map<Long, List<String>> result  = words.stream()
