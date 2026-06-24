@@ -1,6 +1,7 @@
 package in.rajat.level_4_string.day_7;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.stream.Collectors;
 
 public class ReverseOrder {
@@ -13,7 +14,9 @@ public class ReverseOrder {
        String result =  Arrays.stream(str.split("\\s+"))
                .collect(
                        Collectors.collectingAndThen(Collectors.toList(),
-                               list-> list.reversed().stream().collect(Collectors.joining(" "))));
+                               list-> {Collections.reverse(list);
+                           return list.stream().collect(Collectors.joining(" "));
+                       }));
 
        System.out.println(re);
        System.out.println(result);
