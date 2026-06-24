@@ -6,7 +6,7 @@ import java.util.List;
 public class SortAlphabetically {
     public static void main(String[] args) {
 
-        List<String> words = List.of("Banana", "apple", "Cherry", "date");
+        List<String> words = List.of("Banana", "apple", "banana", "Cherry", "date");
        List<String> result = words.stream()
                .sorted(
                        Comparator.comparingInt(s -> s.toLowerCase().charAt(0))
