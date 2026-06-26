@@ -17,7 +17,7 @@ public class GroupByVowelOrConsonant {
 
         Map<String, List<String>> result2 = words.stream().collect(
                 Collectors.groupingBy(word ->VOWEL.indexOf(word.charAt(0))>=0
-                ?"Vowel"
+                ? "Vowel"
                 : "Consonant"));
        //words.stream().
 
