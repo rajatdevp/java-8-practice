@@ -11,6 +11,7 @@ public class SecondLongest {
        Optional<String> result = words.stream()
                .sorted((s1, s2) -> s2.length() - s1.length())
                .skip(1)
+
                .findFirst();
 
        result.ifPresent(System.out::println);
