@@ -12,10 +12,10 @@ public class VowelsMoreThenConsonants {
 
         List<String> result = words.stream()
                 .filter(word ->{
-                    long vowels = word.chars()
+                    long vowelCount = word.chars()
                             .filter(c -> VOWELS.indexOf(c) >= 0)
                             .count();
-                    return vowels > word.length()-vowels;
+                    return vowelCount > word.length() - vowelCount;
                 })
                 .toList();
 
