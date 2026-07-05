@@ -10,8 +10,8 @@ public class TitleCase {
         List<String> words = List.of("java guides", "stream api");
 
        List<String> result = words.stream().map(
-                word -> Arrays.stream(word.split(" "))
-                        .map(w-> Character.toUpperCase(w.charAt(0))+w.substring(1))
+               sentence -> Arrays.stream(sentence.split(" "))
+                        .map(word-> Character.toUpperCase(word.charAt(0))+word.substring(1))
                         .collect(Collectors.joining(" "))).toList();
 
        System.out.println(result);
