@@ -9,7 +9,7 @@ public class RemoveWhitespace {
         List<String> words = List.of("Java 8", "Hello World");
 
         List<String> result = words.stream()
-                .map(s-> s.replace(" ", ""))
+                .map(s-> s.replaceAll("\\s+", ""))
                 .toList();
 
         System.out.println(result);
