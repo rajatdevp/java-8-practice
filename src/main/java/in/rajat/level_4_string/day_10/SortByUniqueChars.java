@@ -1,5 +1,6 @@
 package in.rajat.level_4_string.day_10;
 
+import java.util.Comparator;
 import java.util.List;
 
 public class SortByUniqueChars {
@@ -12,6 +13,12 @@ public class SortByUniqueChars {
                 Math.toIntExact(b.chars().distinct().count()-a.chars().distinct().count()))
                 .toList();
         System.out.println(result);
+
+        List<String> resultOpt = words.stream()
+                .sorted(Comparator.comparingLong((String s)-> s.chars().distinct().count()).reversed())
+                .toList();
+
+        System.out.println(resultOpt);
 
     }
 }
