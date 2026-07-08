@@ -16,6 +16,7 @@ public class FeqOfWord {
                 .collect(
                         Collectors.groupingBy(Function.identity(), LinkedHashMap::new,
                                 Collectors.counting()));
+
        System.out.println(result);
     }
 }
