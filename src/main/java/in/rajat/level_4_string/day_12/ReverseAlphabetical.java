@@ -30,9 +30,6 @@ public class ReverseAlphabetical {
               .sorted(String.CASE_INSENSITIVE_ORDER.reversed())
               .toList();
       System.out.println(result4);
-
-
-
     }
 
 }
