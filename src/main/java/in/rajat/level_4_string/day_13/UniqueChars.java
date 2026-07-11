@@ -2,8 +2,6 @@ package in.rajat.level_4_string.day_13;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
-import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -13,16 +11,15 @@ public class UniqueChars {
 
         List<String> words = List.of("java", "guides");
 
-       Optional<Long> result = words.stream()
+Long result = words.stream()
                 .map(s -> s.split(""))
                 .flatMap(Arrays::stream)
                 .collect(Collectors.groupingBy(
                         Function.identity(),
                         Collectors.counting())).entrySet().stream()
-                .filter(e -> e.getValue() == 1).map(Map.Entry::getValue)
-                .reduce(Long::sum);
+                .filter(e -> e.getValue() == 1).count();
 
-      result.ifPresent(System.out::println);
+System.out.println(result);
 
     }
 }
