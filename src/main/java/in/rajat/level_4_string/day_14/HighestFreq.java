@@ -1,5 +1,6 @@
 package in.rajat.level_4_string.day_14;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -23,5 +24,13 @@ public class HighestFreq {
                 .max(Map.Entry.comparingByValue());
 
         result.ifPresent(System.out::println);
+
+        //better for interview
+
+       Optional<String> betterResult =  words.stream()
+               .max(Comparator.comparingLong(
+                       str-> str.chars().filter(ch-> 'a' == ch).count()));
+
+       betterResult.ifPresent(System.out::println);
     }
 }
