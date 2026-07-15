@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import static in.rajat.level_5_object.utils.Employee.EMPLOYEES;
+import static in.rajat.level_5_object.utils.Employee.UNSTRUCTUREDEMPLOYEES;
 
 public class DepartmentAvgSal {
 
@@ -16,5 +17,18 @@ public class DepartmentAvgSal {
               Collectors.averagingDouble(Employee::getSalary)));
 
       System.out.println(result);
+
+        Map<String, Double> resultsInterView = UNSTRUCTUREDEMPLOYEES.stream()
+                .filter(e -> e.getDepartment() != null)
+                .map(e -> {
+                    e.setDepartment(e.getDepartment().trim());
+                    return e;
+                })
+                .filter(e -> !e.getDepartment().isEmpty())
+                .collect(Collectors.groupingBy(
+                        e -> e.getDepartment().toUpperCase(),
+                        Collectors.averagingDouble(Employee::getSalary)
+                ));
+        System.out.println(resultsInterView);
     }
 }
