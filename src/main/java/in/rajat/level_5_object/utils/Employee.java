@@ -23,13 +23,13 @@ public class Employee {
 
     public static final List<Employee> EMPLOYEES = List.of(
             new Employee(101, "Rajat", "IT", "Bangalore","Male", 85000, 29, 6),
-            new Employee(102, "Priya", "HR", "Female", 60000, 27, 4),
-            new Employee(103, "Amit", "Finance", "Male", 75000, 32, 8),
-            new Employee(104, "Neha", "IT", "Female", 95000, 30, 7),
-            new Employee(105, "Rahul", "Sales", "Male", 55000, 26, 3),
-            new Employee(106, "Sneha", "Marketing", "Female", 70000, 31, 6),
-            new Employee(107, "Vikas", "IT", "Male", 105000, 35, 10),
-            new Employee(108, "Anjali", "Finance", "Female", 80000, 28, 5)
+            new Employee(102, "Priya", "HR", "Hyderabad","Female", 60000, 27, 4),
+            new Employee(103, "Amit", "Finance", "Pune","Male", 75000, 32, 8),
+            new Employee(104, "Neha", "IT", "Delhi", "Female", 95000, 30, 7),
+            new Employee(105, "Rahul", "Sales", "Delhi", "Male", 55000, 26, 3),
+            new Employee(106, "Sneha","Marketing", "Chennai","Female", 70000, 31, 6),
+            new Employee(107, "Vikas", "IT", "Bangalore", "Male", 105000, 35, 10),
+            new Employee(108, "Anjali", "Finance", "Jaipur","Female", 80000, 28, 5)
     );
 
     public static final List<Employee> UNSTRUCTUREDEMPLOYEES = List.of(
