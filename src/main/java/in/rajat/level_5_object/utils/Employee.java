@@ -141,5 +141,19 @@ public class Employee {
 
     );
 
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", department='" + department + '\'' +
+                ", city='" + city + '\'' +
+                ", gender='" + gender + '\'' +
+                ", salary=" + salary +
+                ", age=" + age +
+                ", experience=" + experience +
+                '}';
+    }
+
 
 }
