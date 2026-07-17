@@ -2,6 +2,7 @@ package in.rajat.level_5_object.utils;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.List;
 @ToString
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class Employee {
 
     int id;
