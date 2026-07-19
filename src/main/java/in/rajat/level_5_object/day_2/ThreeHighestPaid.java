@@ -34,5 +34,12 @@ public class ThreeHighestPaid {
                 .sorted(Comparator.comparingDouble(Employee::getSalary).reversed())
                 .toList();
         System.out.println(resultr);
+
+        List<Employee> resultTop5 = EMPLOYEES.stream()
+                .sorted(Comparator.comparingDouble(Employee::getSalary).reversed())
+                .limit(5)
+                .toList();
+
+        System.out.println(resultTop5);
     }
 }
