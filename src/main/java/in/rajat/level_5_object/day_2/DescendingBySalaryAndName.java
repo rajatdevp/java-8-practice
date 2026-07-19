@@ -13,7 +13,8 @@ public static void main(String[] args) {
 
    List<Employee> result =  EMPLOYEES.stream()
             .sorted(Comparator.comparingDouble(Employee::getSalary)
-                    .thenComparing(Employee::getName).reversed())
+                    .reversed()
+                    .thenComparing(Employee::getName))
             .toList();
 
    System.out.println(result);
