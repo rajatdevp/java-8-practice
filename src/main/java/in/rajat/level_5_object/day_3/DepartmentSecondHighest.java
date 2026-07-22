@@ -16,7 +16,7 @@ public class DepartmentSecondHighest {
                     Collectors.collectingAndThen(Collectors.toList()
                             ,list -> list.stream()
                                     .map(Employee::getSalary)
-                                    .sorted(Comparator.reverseOrder()).skip(1).findFirst().orElseThrow())));
+                                    .sorted(Comparator.reverseOrder()).skip(1).findFirst().orElse(0.0d))));
 
           System.out.println(result);
         }
