@@ -1,10 +1,23 @@
 package in.rajat.level_5_object.day_3;
 
+import in.rajat.level_5_object.utils.Employee;
+
+import java.util.Map;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
 import static in.rajat.level_5_object.utils.Employee.EMPLOYEES;
 
 public class DepartmentSecondHighest {
 
         public static  void main(String[] args) {
-          EMPLOYEES
+
+          Map<String, Optional<Double>> result = EMPLOYEES.stream().collect(Collectors.groupingBy(Employee::getDepartment,
+                    Collectors.collectingAndThen(Collectors.toList()
+                            ,list -> list.stream()
+                                    .map(Employee::getSalary)
+                                    .sorted(Double::compareTo).skip(1).findFirst())));
+
+          System.out.println(result);
         }
 }
