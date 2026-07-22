@@ -2,6 +2,7 @@ package in.rajat.level_5_object.day_3;
 
 import in.rajat.level_5_object.utils.Employee;
 
+import java.util.Comparator;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -16,7 +17,7 @@ public class DepartmentSecondHighest {
                     Collectors.collectingAndThen(Collectors.toList()
                             ,list -> list.stream()
                                     .map(Employee::getSalary)
-                                    .sorted(Double::compareTo).skip(1).findFirst())));
+                                    .sorted(Comparator.reverseOrder()).skip(1).findFirst())));
 
           System.out.println(result);
         }
