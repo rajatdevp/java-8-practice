@@ -19,5 +19,18 @@ public class DepartmentSecondHighest {
                                     .sorted(Comparator.reverseOrder()).skip(1).findFirst().orElse(0.0d))));
 
           System.out.println(result);
+
+          Map<String, Employee> result2 = EMPLOYEES.stream().collect(Collectors.groupingBy(
+                    Employee::getDepartment,
+                    Collectors.collectingAndThen(Collectors.toList(),
+                            empList -> empList
+                            .stream()
+                            .sorted(Comparator.comparingDouble(
+                                    Employee::getSalary).reversed()).skip(1).findFirst().orElse(null)
+
+            )));
+
+          System.out.println(result2);
+
         }
 }
