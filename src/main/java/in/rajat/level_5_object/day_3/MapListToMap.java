@@ -28,6 +28,5 @@ public class MapListToMap {
                 ));//if result need to be list of all names
 
         System.out.println(result2);
-
     }
 }
