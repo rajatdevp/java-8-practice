@@ -17,5 +17,6 @@ public class TotalSalaryPerDep {
                         Collectors.summingDouble(Employee::getSalary)));
 
         System.out.println(result);
+
     }
 }
