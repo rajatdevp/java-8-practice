@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import static in.rajat.level_5_object.utils.Employee.EMPLOYEES;
-import static in.rajat.level_5_object.utils.Employee.UNSTRUCTUREDEMPLOYEES;
+import static in.rajat.level_5_object.utils.Employee.UNSTRUCTURED_EMPLOYEES;
 
 public class DepartmentAvgSal {
 
@@ -18,7 +18,7 @@ public class DepartmentAvgSal {
 
       System.out.println(result);
 
-        Map<String, Double> resultsInterView = UNSTRUCTUREDEMPLOYEES.stream()
+        Map<String, Double> resultsInterView = UNSTRUCTURED_EMPLOYEES.stream()
                 .filter(e -> e.getDepartment() != null)
                 .map(e -> {
                     e.setDepartment(e.getDepartment().trim());
