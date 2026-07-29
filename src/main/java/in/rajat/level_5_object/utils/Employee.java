@@ -34,7 +34,7 @@ public class Employee {
             new Employee(107, "Vikas", "IT", "Bangalore", "Male", 105000, 35, 10, date("15-03-2016")),
             new Employee(108, "Anjali", "Finance", "Jaipur", "Female", 80000, 28, 5, date("18-07-2021"))
     );
-    /*public static final List<Employee> UNSTRUCTURED_EMPLOYEES = List.of(
+    public static final List<Employee> UNSTRUCTURED_EMPLOYEES = List.of(
 
             new Employee(101, "Rajat", "IT", "Bangalore", "Male", 85000, 29, 6, date("15-06-2020")),
             new Employee(102, "Priya", "HR", "Hyderabad", "Female", 60000, 27, 4, date("10-08-2022")),
@@ -87,7 +87,7 @@ public class Employee {
 
             // Duplicate ID
             new Employee(101, "DuplicateId", "IT", "Bangalore", "Male", 88000, 29, 6, date("01-01-2021"))
-    );*/
+    );
 
     private static LocalDate date(String date) {
         return LocalDate.parse(date, FORMATTER);
