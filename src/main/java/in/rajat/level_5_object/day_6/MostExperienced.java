@@ -13,7 +13,6 @@ public class MostExperienced {
 
       Optional<Employee> result =  EMPLOYEES.stream()
               .max(Comparator.comparingInt(Employee::getExperience));
-
       result.ifPresent(System.out::println);
     }
 }
