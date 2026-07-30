@@ -84,6 +84,8 @@ public class Employee {
 
             // Very high salary
             new Employee(118, "CEO", "Management", "Mumbai", "Male", 1_000_000, 50, 25, date("01-01-2005")),
+
+            // Duplicate ID
             new Employee(101, "DuplicateId", "IT", "Bangalore", "Male", 88000, 29, 6, date("01-01-2021"))
     );
 
