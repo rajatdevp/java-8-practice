@@ -19,7 +19,7 @@ public class AmbiguousReference {
     public static void main(String[] args) {
 
         AmbiguousReference groupByJoiningYear = new AmbiguousReference();
-        groupByJoiningYear.sum(null);//java: reference to sum is ambiguous
+        //groupByJoiningYear.sum(null);//java: reference to sum is ambiguous
         // EMPLOYEES.stream().collect(Collectors.groupingBy(Employee::getJoiningDate::combiner));
     }
 }
