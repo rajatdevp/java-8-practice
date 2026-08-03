@@ -12,7 +12,10 @@ public class AverageAgePreDep {
     public static void main(String[] args) {
 
      Map<String, Double> result = EMPLOYEES.stream()
-                .collect(Collectors.groupingBy(Employee::getDepartment, Collectors.averagingInt(Employee::getAge)));
+                .collect(
+                        Collectors.groupingBy(
+                                Employee::getDepartment,
+                                Collectors.averagingInt(Employee::getAge)));
 
      System.out.println(result);
     }
