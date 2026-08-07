@@ -21,7 +21,6 @@ public class Employee {
     int age, experience;
     private LocalDate joiningDate;
 
-
     // Reusable formatter instance
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
