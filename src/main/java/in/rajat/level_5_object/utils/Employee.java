@@ -23,7 +23,6 @@ public class Employee {
     // Reusable formatter instance
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
-
     public static final List<Employee> EMPLOYEES = List.of(
             new Employee(101, "Rajat", "IT", "Bangalore", "Male", 85000, 29, 6, date("15-06-2020")),
             new Employee(102, "Priya", "HR", "Hyderabad", "Female", 60000, 27, 4, date("10-08-2022")),
