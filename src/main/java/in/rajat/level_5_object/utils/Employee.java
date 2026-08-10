@@ -20,7 +20,6 @@ public class Employee {
     double salary;
     int age, experience;
     private LocalDate joiningDate;
-
     // Reusable formatter instance
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
