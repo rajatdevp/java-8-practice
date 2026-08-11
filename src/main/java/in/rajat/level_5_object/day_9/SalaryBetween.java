@@ -16,6 +16,7 @@ public class SalaryBetween {
                 .toList();
 
        System.out.println(result);
+       System.out.println(result.size());
     }
 
 }
