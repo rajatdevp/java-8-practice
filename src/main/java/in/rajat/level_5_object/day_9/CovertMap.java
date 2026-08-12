@@ -33,7 +33,9 @@ public class CovertMap {
 
         System.out.println(result2);
 
-        Map<String, List<String>> result3 = EMPLOYEES.stream().collect(Collectors.groupingBy(Employee::getDepartment))
+        Map<String, List<String>> result3 = EMPLOYEES.stream()
+                .collect(Collectors.groupingBy(
+                        Employee::getDepartment))
                 .entrySet()
                 .stream()
                 .collect(Collectors.toMap(Map.Entry::getKey,
