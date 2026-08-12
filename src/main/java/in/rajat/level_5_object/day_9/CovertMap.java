@@ -12,7 +12,7 @@ public class CovertMap {
 
     public static void main(String[] args) {
 
-        Map<String, List<String>> result = EMPLOYEES.stream()
+        Map<String, List<String>> result1 = EMPLOYEES.stream()
                 .collect(Collectors.groupingBy(
                         Employee::getDepartment,
                         Collectors.collectingAndThen(Collectors.toList(),
@@ -22,6 +22,26 @@ public class CovertMap {
                                 .toList())
                 )));
 
-        System.out.println(result);
+        System.out.println(result1);
+
+        Map<String, List<String>> result2 = EMPLOYEES.stream()
+                .collect(Collectors.groupingBy(
+                        Employee::getDepartment,
+                        Collectors.mapping(
+                                Employee::getName,
+                                Collectors.toList())));
+
+        System.out.println(result2);
+
+        Map<String, List<String>> result3 = EMPLOYEES.stream().collect(Collectors.groupingBy(Employee::getDepartment))
+                .entrySet()
+                .stream()
+                .collect(Collectors.toMap(Map.Entry::getKey,
+                        entry -> entry.getValue()
+                                .stream()
+                                .map(Employee::getName)
+                                .collect(Collectors.toList())));
+
+        System.out.println(result3);
     }
 }
