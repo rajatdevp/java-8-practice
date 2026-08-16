@@ -9,7 +9,7 @@ public class FilterAndSum {
     public static void main(String[] args) {
 
        Double result = EMPLOYEES.stream()
-                .filter(emp-> emp.getCity().equals("Bangalore"))
+                .filter(emp-> "Bangalore".equals(emp.getCity()))
                 .mapToDouble(Employee::getSalary)
                 .sum();
 
