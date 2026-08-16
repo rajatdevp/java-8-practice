@@ -24,14 +24,14 @@ public class CovertMap {
 
         System.out.println(result1);
 
-        Map<String, List<String>> result2 = EMPLOYEES.stream()
+        Map<String, List<String>> result2Best = EMPLOYEES.stream()
                 .collect(Collectors.groupingBy(
                         Employee::getDepartment,
                         Collectors.mapping(
                                 Employee::getName,
                                 Collectors.toList())));
 
-        System.out.println(result2);
+        System.out.println(result2Best);
 
         Map<String, List<String>> result3 = EMPLOYEES.stream()
                 .collect(Collectors.groupingBy(
