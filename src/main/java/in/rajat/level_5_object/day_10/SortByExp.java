@@ -19,6 +19,5 @@ public class SortByExp {
        for (Employee employee : result) {
            System.out.println(employee);
        }
-
     }
 }
