@@ -1,0 +1,25 @@
+package in.rajat.level_5_object.day_11;
+
+import in.rajat.level_5_object.utils.Employee;
+
+import java.util.Map;
+import java.util.stream.Collectors;
+
+import static in.rajat.level_5_object.utils.Employee.EMPLOYEES;
+
+public class GroupByDepartmentAndCountByFilter {
+
+    public static void main(String[] args) {
+
+       Map<String, Long> result = EMPLOYEES.stream()
+                .collect(Collectors.groupingBy(
+                        Employee::getDepartment,
+                        Collectors.collectingAndThen(
+                                Collectors.toList(),
+                                list ->
+                                        list.stream()
+                                                .filter(
+                                                        emp-> emp.getSalary()>30000).count())));
+       System.out.println(result);
+    }
+}
