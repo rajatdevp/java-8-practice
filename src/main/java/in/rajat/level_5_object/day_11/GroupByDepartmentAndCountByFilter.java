@@ -21,5 +21,15 @@ public class GroupByDepartmentAndCountByFilter {
                                                 .filter(
                                                         emp-> emp.getSalary()>30000).count())));
        System.out.println(result);
+
+      Map<String, Long> resultBetter = EMPLOYEES.stream()
+               .collect(Collectors.groupingBy(
+                       Employee::getDepartment,
+                       Collectors.filtering(empList-> empList.getSalary()>30000,
+                               Collectors.counting())));
+
+      System.out.println(resultBetter);
+
+
     }
 }
