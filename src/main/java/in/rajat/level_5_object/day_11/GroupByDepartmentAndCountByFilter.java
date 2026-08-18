@@ -30,6 +30,12 @@ public class GroupByDepartmentAndCountByFilter {
 
       System.out.println(resultBetter);
 
+        Map<String, Long> resultOnlyJava8 = EMPLOYEES.stream()
+              .filter(employee ->employee.getSalary()>30000)
+              .collect(Collectors.groupingBy(
+                      Employee::getDepartment,
+                      Collectors.counting()));
 
+        System.out.println(resultOnlyJava8);
     }
 }
