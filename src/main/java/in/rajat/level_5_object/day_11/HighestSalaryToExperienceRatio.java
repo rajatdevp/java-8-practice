@@ -12,7 +12,6 @@ public class HighestSalaryToExperienceRatio {
     public static void main(String[] args) {
       Optional<Employee> result = EMPLOYEES.stream()
                 .max(Comparator.comparingDouble(e -> e.getSalary() / e.getExperience()));
-
       result.ifPresent(System.out::println);
 
     }
