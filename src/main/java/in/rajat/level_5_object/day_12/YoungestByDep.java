@@ -30,6 +30,12 @@ public class YoungestByDep {
 
         System.out.println(result2);
 
+        Map<String, Optional<Employee>> result3 = EMPLOYEES.stream()
+                .collect(Collectors.groupingBy(
+                        Employee::getDepartment,
+                        Collectors.reducing((e1, e2) -> e1.getSalary() < e2.getSalary() ? e1 : e2)));
+
+        System.out.println(result3);
 
     }
 }
