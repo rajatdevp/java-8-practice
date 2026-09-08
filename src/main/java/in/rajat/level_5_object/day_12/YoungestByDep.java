@@ -45,6 +45,5 @@ public class YoungestByDep {
                                 Optional::orElseThrow)));
 
         System.out.println(result4);
-
     }
 }
