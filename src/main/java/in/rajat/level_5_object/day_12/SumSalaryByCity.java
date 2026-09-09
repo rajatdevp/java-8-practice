@@ -17,5 +17,6 @@ public class SumSalaryByCity {
                         Collectors.summingDouble(Employee::getSalary)));
 
        System.out.println(result);
+
     }
 }
