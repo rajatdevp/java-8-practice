@@ -16,7 +16,7 @@ public class GroupAndSort {
             .collect(Collectors.groupingBy(
                     Employee::getDepartment,
                     Collectors.collectingAndThen(Collectors.toList(), list -> list.stream()
-                            .sorted(Comparator.comparing(Employee::getSalary).reversed()).toList())));
+                            .sorted(Comparator.comparingDouble(Employee::getSalary).reversed()).toList())));
 
     System.out.println(result);
     }
