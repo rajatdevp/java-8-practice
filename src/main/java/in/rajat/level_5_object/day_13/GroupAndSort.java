@@ -15,8 +15,12 @@ public class GroupAndSort {
     Map<String, List<Employee>> result = EMPLOYEES.stream()
             .collect(Collectors.groupingBy(
                     Employee::getDepartment,
-                    Collectors.collectingAndThen(Collectors.toList(), list -> list.stream()
-                            .sorted(Comparator.comparingDouble(Employee::getSalary).reversed()).toList())));
+                    Collectors.collectingAndThen(
+                            Collectors.toList(), list -> list.stream()
+                            .sorted(Comparator.comparingDouble(
+                                    Employee::getSalary)
+                                    .reversed())
+                                    .toList())));
 
     System.out.println(result);
     }
