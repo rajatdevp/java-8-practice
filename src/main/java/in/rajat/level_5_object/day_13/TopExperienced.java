@@ -16,6 +16,5 @@ public class TopExperienced {
                 .limit(2).toList();
 
         System.out.println(result);
-
     }
 }
