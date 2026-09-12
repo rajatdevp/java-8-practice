@@ -1,11 +1,11 @@
 package in.rajat.level_5_object.day_8;
 
-import in.rajat.level_5_object.utils.Employee;
+import in.rajat.utils.Employee;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static in.rajat.level_5_object.utils.Employee.EMPLOYEES;
+import static in.rajat.utils.Employee.EMPLOYEES;
 
 public class FindByAvgSal {
 

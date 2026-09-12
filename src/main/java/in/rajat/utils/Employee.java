@@ -1,4 +1,4 @@
-package in.rajat.level_5_object.utils;
+package in.rajat.utils;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

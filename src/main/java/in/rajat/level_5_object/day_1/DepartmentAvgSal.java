@@ -1,12 +1,12 @@
 package in.rajat.level_5_object.day_1;
 
-import in.rajat.level_5_object.utils.Employee;
+import in.rajat.utils.Employee;
 
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import static in.rajat.level_5_object.utils.Employee.EMPLOYEES;
-import static in.rajat.level_5_object.utils.Employee.UNSTRUCTURED_EMPLOYEES;
+import static in.rajat.utils.Employee.EMPLOYEES;
+import static in.rajat.utils.Employee.UNSTRUCTURED_EMPLOYEES;
 
 public class DepartmentAvgSal {
 

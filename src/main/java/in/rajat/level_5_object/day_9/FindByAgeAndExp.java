@@ -1,6 +1,6 @@
 package in.rajat.level_5_object.day_9;
 
-import static in.rajat.level_5_object.utils.Employee.EMPLOYEES;
+import static in.rajat.utils.Employee.EMPLOYEES;
 
 public class FindByAgeAndExp {
 

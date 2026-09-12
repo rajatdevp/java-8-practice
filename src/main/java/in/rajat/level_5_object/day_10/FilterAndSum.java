@@ -1,8 +1,8 @@
 package in.rajat.level_5_object.day_10;
 
-import in.rajat.level_5_object.utils.Employee;
+import in.rajat.utils.Employee;
 
-import static in.rajat.level_5_object.utils.Employee.EMPLOYEES;
+import static in.rajat.utils.Employee.EMPLOYEES;
 
 public class FilterAndSum {
 
